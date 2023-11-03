@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: default
+app:
+  consoleParam:
+    info: "Введите команду:\n\t
+    для сохранения контакта - (ФИО;номер телефона;email),\n\t
+    для удаления контакта - email,\n\t
+    для вывода данных в консоль - print,\n\t
+    для сохранения в файл - write, \n\t
+    для выхода - exit."
+    fullData: ([А-ЯЁ][а-яё]+[\-\s]?){3,}[;](\+?\d+([\(\s\-]?\d+[\)\s\-]?[\d\s\-]+)?)[;]([a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,})
+    email: ([a-zA-Z1-9\-\._]+@[a-z1-9]+(.[a-z1-9]+){1,})
+    exit: exit
+    print: print
+    write: write
+  writePath: src/main/resources/contacts.txt
+  readPath: src/main/resources/contacts-init.txt
